@@ -16,5 +16,6 @@ else
 {putchar(hex);
 }
 }
+putchar('\n');
 return (0);
 }
