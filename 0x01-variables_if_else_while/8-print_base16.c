@@ -5,8 +5,8 @@
  *
  * Return: 0 on successful execution
  */
-int main(void){
-int hex;
+int main(void)
+{int hex;
 for (hex = 48; hex <= 102; hex++)
 {
 if (hex > 57 && hex < 97)
@@ -16,4 +16,5 @@ else
 {putchar(hex);
 }
 }
+return (0);
 }
