@@ -34,4 +34,6 @@ counter3 = mastercounter;
 counter2++;
 comb1++;
 }
+putchar('\n');
+return (0);
 }
