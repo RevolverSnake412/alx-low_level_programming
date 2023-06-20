@@ -1,5 +1,5 @@
 #include "main.h"
-/** 
+/**
  * print_alphabet - from a to z lowercased
  *
  * return: 0 on success
