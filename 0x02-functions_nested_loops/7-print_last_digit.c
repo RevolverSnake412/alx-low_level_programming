@@ -4,17 +4,18 @@
  *
  * @r: int
  *
- * @LastDig: int
- *
  * Return: LastDig, 0 on success
 */
 int print_last_digit(int r)
-{
+{int lastdig;
 if (r < 0)
 {r *= -1;
 }
-r %= 10;
-_putchar(48 + r);
-return (r);
+lastdig = r % 10;
+if (lastdig < 0)
+{lastdig *= -1;
+}
+_putchar(48 + lastdig);
+return (lastdig);
 return (0);
 }
