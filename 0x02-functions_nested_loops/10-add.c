@@ -26,7 +26,7 @@ if (sign == -1)
 }
 while (result != 0)
 {int digit = result % 10;
-putchar(digit + 48);
+putchar(digit + '0');
 result /= 10;
 }
 return (0);
