@@ -4,7 +4,7 @@
  *
  * Return: 0 on success
 */
-void print_alphabet_x10(void)
+int print_alphabet_x10(void)
 {int i, counter;
 while (counter<11)
 {
