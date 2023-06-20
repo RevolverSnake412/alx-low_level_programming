@@ -11,12 +11,12 @@ while (hl <= 50)
 {minr = 48;
 minl = 48;
 while (minl <= 53)
-{putchar(hl);
-putchar(hr);
-putchar(58);
-putchar(minl);
-putchar(minr);
-putchar('\n');
+{_putchar(hl);
+_putchar(hr);
+_putchar(58);
+_putchar(minl);
+_putchar(minr);
+_putchar('\n');
 if (minr == 57)
 {minr = 48;
 minl++;
