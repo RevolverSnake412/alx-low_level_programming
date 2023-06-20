@@ -10,21 +10,23 @@ for (i = 0; i <= 9; i++)
 {
 for (j = 0; j <= 9; j++)
 {int number = j * i;
-int xTenDigit = number / 10;
-int xOneDigit = number % 10;
-if (xTenDigit == 0)
-{_putchar(32);
-_putchar(xOneDigit + 48);
+if (j == 0)
+{_putchar(number + 48);
 }
-else
-{_putchar(xTenDigit + 48);
-_putchar(xOneDigit + 48);
-}
-if (j != 9)
+if (number < 10 && j != 0)
 {_putchar(44);
 _putchar(32);
+_putchar(32);
+_putchar(number + 48);
+}
+else if (number >= 10)
+{_putchar(44);
+_putchar(32);
+_putchar((number / 10) + 48);
+_putchar((number % 10) + 48);
 }
 }
+_putchar('\n');
 }
 return (0);
 }
