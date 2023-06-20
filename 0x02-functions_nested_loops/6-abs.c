@@ -2,18 +2,18 @@
 /**
  * _abs - computes the absolute
  *
- * @int: int
+ * @r: int
  *
- * Return: int, 0 on success
+ * Return: r, 0 on success
 */
-int _abs(int)
+int _abs(int r)
 {
-if (int < 0)
-{int *= -1;
-return (int);
+if (r < 0)
+{r *= -1;
+return (r);
 }
-else if (int > 0)
-{return (int);
+else if (r > 0)
+{return (r);
 }
 return (0);
 }
