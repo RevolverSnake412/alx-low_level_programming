@@ -11,11 +11,11 @@
 int add(int a, int b)
 {int sum = a + b;
 int sign = 1;
+int result = 0;
 if (sum < 0)
 {sum = -sum;
 sign = -1;
 }
-int result = 0;
 while (sum != 0)
 {int digit = sum % 10;
 result = result * 10 + digit;
