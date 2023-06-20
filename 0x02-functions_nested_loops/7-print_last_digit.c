@@ -13,7 +13,7 @@ int print_last_digit(int r)
 if (r < 0)
 {r *= -1;
 }
-LastDig = r % 10;
-return (LastDig);
+r %= 10;
+return (r);
 return (0);
 }
