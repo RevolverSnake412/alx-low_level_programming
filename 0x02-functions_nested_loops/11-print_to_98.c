@@ -7,7 +7,7 @@
  * Return: 0 when successful
 */
 int print_to_98(int n)
-{i = n;
+{int i = n;
 int number = i;
 int digits[3];
 if (n <= 98)
