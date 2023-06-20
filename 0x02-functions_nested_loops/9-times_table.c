@@ -25,9 +25,6 @@ if (j != 9)
 _putchar(32);
 }
 }
-if (i != 9)
-{_putchar('\n');
-}
 }
 return (0);
 }
