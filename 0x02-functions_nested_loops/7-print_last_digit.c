@@ -9,11 +9,11 @@
  * Return: LastDig, 0 on success
 */
 int print_last_digit(int r)
-{
+{int Lastdig
 if (r < 0)
 {r *= -1;
 }
-int LastDig = r % 10;
+LastDig = r % 10;
 return (LastDig);
 return (0);
 }
