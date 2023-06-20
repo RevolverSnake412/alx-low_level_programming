@@ -4,10 +4,16 @@
  *
  * @r: int
  *
- * Return: 0 on success
+ * @LastDig: int
+ *
+ * Return: LastDig, 0 on success
 */
-int print_last_digit(int r)
-{r %= 10;
-_putchar(r);
+int print_last_digit(int r, LastDig)
+{
+if (r < 0)
+{r *= -1;
+}
+LastDig = r % 10;
+return (LastDig);
 return (0);
 }
