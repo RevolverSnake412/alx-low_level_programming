@@ -4,10 +4,10 @@
  *
  * @r: int
  *
- * Return: r, 0 on success
+ * Return: 0 on success
 */
 int print_last_digit(int r)
 {r %= 10;
-return (r);
+_putchar(r);
 return (0);
 }
