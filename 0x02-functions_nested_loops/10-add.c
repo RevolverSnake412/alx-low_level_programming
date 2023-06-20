@@ -7,14 +7,27 @@
  *
  * Return: 0 when success
 */
+#include <stdio.h>
 int add(int a, int b)
-{int result = a + b;
-if (result / 10 == 0)
-{_putchar(result + 48);
+{int sum = a + b;
+int sign = 1;
+if (sum < 0)
+{sum = -sum;
+sign = -1;
 }
-else
-{_putchar((result / 10) + 48);
-_putchar((result % 10) + 48);
+int result = 0;
+while (sum != 0)
+{int digit = sum % 10;
+result = result * 10 + digit;
+sum /= 10;
+}
+if (sign == -1)
+{putchar('-');
+}
+while (result != 0)
+{int digit = result % 10;
+putchar(digit + 48);
+result /= 10;
 }
 return (0);
 }
