@@ -6,7 +6,6 @@
 */
 int jack_bauer(void)
 {int minl, minr, hl = 48, hr = 48;
-int count;
 while (hl <= 50)
 {minr = 48;
 minl = 48;
