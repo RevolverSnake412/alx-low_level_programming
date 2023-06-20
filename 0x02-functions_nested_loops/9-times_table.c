@@ -5,10 +5,10 @@
  * Return: 0 when success
 */
 int times_table(void)
+{int i, j;
+for (i = 0; i <= 9; i++)
 {
-for (int i = 0; i <= 9; i++)
-{
-for (int j = 0; j <= 9; j++)
+for (j = 0; j <= 9; j++)
 {int number = j * i;
 int xTenDigit = number / 10;
 int xOneDigit = number % 10;
