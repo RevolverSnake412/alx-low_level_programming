@@ -5,8 +5,8 @@
  * Return: 0 on success
 */
 int print_alphabet_x10(void)
-{int i, counter;
-while (counter<11)
+{int i, counter = 1;
+while (counter < 11)
 {
 for (i = 97; i <= 122; i++)
 {_putchar(i);
