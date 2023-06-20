@@ -6,7 +6,7 @@
 */
 int islower(int c)
 {
-if (islower(c))
+if (c >= 97 && c <= 122)
 {_putchar(49);
 }
 else
