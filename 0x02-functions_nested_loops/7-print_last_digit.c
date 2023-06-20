@@ -8,7 +8,7 @@
  *
  * Return: LastDig, 0 on success
 */
-int print_last_digit(int r, int LastDig)
+int print_last_digit(int r)
 {
 if (r < 0)
 {r *= -1;
