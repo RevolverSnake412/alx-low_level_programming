@@ -14,6 +14,7 @@ if (r < 0)
 {r *= -1;
 }
 r %= 10;
+_putchar(48 + r);
 return (r);
 return (0);
 }
