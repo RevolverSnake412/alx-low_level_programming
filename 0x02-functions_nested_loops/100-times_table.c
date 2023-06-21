@@ -17,34 +17,34 @@ for (; j <= n; j++)
 {
 if (j == 0)
 {
-putchar((i * j)+48);
+_putchar((i * j)+48);
 }
 else if ((i * j) < 10 && j != 0)
 {
-putchar(44);
-putchar(32);
-putchar(32);
-putchar(32);
-putchar((i * j)+48);
+_putchar(44);
+_putchar(32);
+_putchar(32);
+_putchar(32);
+_putchar((i * j)+48);
 }
 else if ((i * j) >= 10 && (i * j) < 100)
 {
-putchar(44);
-putchar(32);
-putchar(32);
-putchar(((i * j) / 10) + 48);
-putchar(((i * j) % 10) + 48);
+_putchar(44);
+_putchar(32);
+_putchar(32);
+_putchar(((i * j) / 10) + 48);
+_putchar(((i * j) % 10) + 48);
 }
 else if ((i * j) >= 100)
 {
-putchar(44);
-putchar(32);
-putchar(((i * j) / 100) + 48);
-putchar((((i * j) / 10) % 10) + 48);
-putchar(((i * j) % 10) + 48);
+_putchar(44);
+_putchar(32);
+_putchar(((i * j) / 100) + 48);
+_putchar((((i * j) / 10) % 10) + 48);
+_putchar(((i * j) % 10) + 48);
 }
 }
-putchar('\n');
+_putchar('\n');
 }
 }
 return (0);
