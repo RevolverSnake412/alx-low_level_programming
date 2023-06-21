@@ -4,7 +4,7 @@
  *
  * Return: 0 on success
 */
-void main(void)
+int main(void)
 {int i, s = 0;
 for (i = 1024; i != 1; i--)
 {
