@@ -17,6 +17,5 @@ a = b;
 b = s;
 }
 printf("%lu", result);
-putchar('\n');
 return (0);
 }
