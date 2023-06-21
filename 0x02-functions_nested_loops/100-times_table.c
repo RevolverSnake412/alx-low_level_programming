@@ -40,5 +40,6 @@ if (i != n)
 _putchar('\n');
 }
 }
+_putchar('\n');
 return (0);
 }
