@@ -7,22 +7,22 @@
  * Return: 0 when success
 */
 int print_to_98(int n)
-{int i = n, j = n;
+{
 if (n >= 98)
 {
-for (i; i >= 98; i--)
+for (; n >= 98; n--)
 {
-if (i >= 100)
-{_putchar((i / 100) + 48);
-_putchar(((i / 10) % 10) + 48);
-_putchar((i % 10) + 48);
+if (n >= 100)
+{_putchar((n / 100) + 48);
+_putchar(((n / 10) % 10) + 48);
+_putchar((n % 10) + 48);
 }
 else
 {
-_putchar((i / 10) + 48);
-_putchar((i % 10) + 48);
+_putchar((n / 10) + 48);
+_putchar((n % 10) + 48);
 }
-if (i != 98)
+if (n != 98)
 {_putchar(44);
 _putchar(32);
 }
@@ -30,10 +30,10 @@ _putchar(32);
 }
 else if (n <= 98)
 {
-for (j; j <= 98; j++)
+for (; n <= 98; n++)
 {
-if (j < 0)
-{int neg = j * -1;
+if (n < 0)
+{int neg = n * -1;
 _putchar(45);
 if (neg >= 100)
 {
@@ -47,16 +47,16 @@ _putchar((neg / 10) + 48);
 _putchar((neg % 10) + 48);
 }
 }
-else if (j <= 9)
+else if (n <= 9)
 {
-_putchar(j + 48);
+_putchar(n + 48);
 }
-else if (j >= 10)
+else if (n >= 10)
 {
-_putchar((j / 10) + 48);
-_putchar((j % 10) + 48);
+_putchar((n / 10) + 48);
+_putchar((n % 10) + 48);
 }
-if (j != 98)
+if (n != 98)
 {
 _putchar(44);
 _putchar(32);
