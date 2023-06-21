@@ -5,8 +5,11 @@
  * Return: 0 on return
 */
 int main(void)
-{unsigned long int a = 1, b = 2, s, result;
+{unsigned long int a, b, s, result;
 int i;
+a=1;
+b=2;
+result=0;
 for (i = 1; i <= 33; i++)
 {
 if (a < 4000000 && (a % 2) == 0)
