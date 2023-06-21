@@ -5,16 +5,16 @@
  * Return: 0 on success
 */
 int main(void)
-{long long int a = 0;
-long long int b = 1;
-long long int i, s;
-for (i = 0; i != 50; i++)
+{unsigned long a = 0, b = 1, s = 0, i = 0;
+for (; i != 50; i++)
 {
 s = a + b;
+printf("%lu", s);
 a = b;
 b = s;
+if (i != 49)
+printf(", ");
 }
-printf("%lld", a);
+putchar('\n');
 return (0);
 }
-
