@@ -26,6 +26,9 @@ if (n != 98)
 {_putchar(44);
 _putchar(32);
 }
+else
+{_putchar('\n');
+}
 }
 }
 else if (n <= 98)
@@ -60,6 +63,9 @@ if (n != 98)
 {
 _putchar(44);
 _putchar(32);
+}
+else
+{_putchar('\n');
 }
 }
 }
