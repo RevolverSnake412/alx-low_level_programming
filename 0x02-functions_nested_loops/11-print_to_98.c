@@ -11,24 +11,16 @@ int print_to_98(int n)
 {
 if (n >= 98)
 {
-while (n >= 98)
-{printf("%d", n);
-if (n != 98)
-{_putchar(44);
-_putchar(32);
-}
-n--;
-}
+while (n > 98)
+printf("%d, ", n--);
+printf("%d", n);
 }
 else
 {
-while (n <= 98)
-{printf("%d", n++);
-if (n != 98)
-{_putchar(44);
-_putchar(32);
+while (n < 98)
+printf("%d, ", n++);
+printf("%d", n);
 }
-}
-}
+printf("\n");
 return (0);
 }
