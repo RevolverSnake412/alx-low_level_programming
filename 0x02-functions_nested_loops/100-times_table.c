@@ -7,39 +7,45 @@
  * Return: 0 on success
 */
 int print_times_table(int n)
-{int i, j;
-for (i = 0; i <= n; i++)
-{j = 1;
-_putchar(48);
-_putchar(44);
-_putchar(32);
-for (; j <= n; j++)
-{int result = i * j;
-if (result >= 100)
-{_putchar((result / 100) + 48);
-_putchar(((result / 10) % 10) + 48);
-_putchar((result % 10) + 48);
-}
-else if (result >= 10 && result <= 99)
-{_putchar(32);
-_putchar((result / 10) + 48);
-_putchar((result % 10) + 48);
-}
-else
-{_putchar(32);
-_putchar(32);
-_putchar(result + 48);
-}
-if (j != n)
-{_putchar(44);
-_putchar(32);
-}
-}
-if (i != n)
+{int i = 0, j;
+if (n >= 0 && n <= 15)
 {
-_putchar('\n');
+for (; i <= n; i++)
+{
+j = 0;
+for (; j <= n; j++)
+{
+if (j == 0)
+{
+putchar((i * j)+48);
+}
+else if ((i * j) < 10 && j != 0)
+{
+putchar(44);
+putchar(32);
+putchar(32);
+putchar(32);
+putchar((i * j)+48);
+}
+else if ((i * j) >= 10 && (i * j) < 100)
+{
+putchar(44);
+putchar(32);
+putchar(32);
+putchar(((i * j) / 10) + 48);
+putchar(((i * j) % 10) + 48);
+}
+else if ((i * j) >= 100)
+{
+putchar(44);
+putchar(32);
+putchar(((i * j) / 100) + 48);
+putchar((((i * j) / 10) % 10) + 48);
+putchar(((i * j) % 10) + 48);
 }
 }
-_putchar('\n');
+putchar('\n');
+}
+}
 return (0);
 }
