@@ -4,57 +4,64 @@
  *
  * @n: int
  *
- * Return: 0 when successful
+ * Return: 0 when success
 */
 int print_to_98(int n)
-{int i = n;
-int number = i;
-int digits[3];
-if (n <= 98)
 {
-for (i; i <= 98; i++)
+if (n >= 98)
 {
-if (i != n)
-{_putchar(44);
-_putchar(32);
-}
-if (number < 0)
-{_putchar(45);
-number *= -1;
-}
-int count = 0;
-do {digits[count++] = number % 10;
-number /= 10;
-} while (number > 0);
-int j = count - 1;
-for (j; j >= 0; j--)
-{_putchar(digits[j] + 48);
-}
-}
+for (n; n >= 98; n--)
+{
+if (n >= 100)
+{_putchar((n / 100) + 48);
+_putchar(((n / 10) % 10) + 48);
+_putchar((n % 10) + 48);
 }
 else
 {
-for (i; i >= 98; i--)
-{
-if (i != n)
+_putchar((n / 10) + 48);
+_putchar((n % 10) + 48);
+}
+if (n != 98)
 {_putchar(44);
 _putchar(32);
 }
-int number = i;
-if (number < 0)
-{_putchar(45);
-number *= -1;
-}
-int digits[3];
-int count = 0;
-do {digits[count++] = number % 10;
-number /= 10;
-} while (number > 0);
-for (int j = count - 1; j >= 0; j--)
-{_putchar(digits[j] + 48);
 }
 }
+else if (n <= 98)
+{
+for (n; n <= 98; n++)
+{
+if (n < 0)
+{int neg = n * -1;
+_putchar(45);
+if (neg >= 100)
+{
+_putchar((neg / 100) + 48);
+_putchar(((neg / 10) % 10) + 48);
+_putchar((neg % 10) + 48);
 }
-_putchar('\n');
+else
+{
+_putchar((neg / 10) + 48);
+_putchar((neg % 10) + 48);
+}
+}
+else if (n <= 9)
+{
+_putchar(n + 48);
+}
+else if (n >= 10)
+{
+_putchar((n / 10) + 48);
+_putchar((n % 10) + 48);
+}
+if (n != 98)
+{
+_putchar(44);
+_putchar(32);
+}
+}
+}
 return (0);
 }
