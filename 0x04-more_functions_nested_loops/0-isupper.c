@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * _isupper - I am case sensitive, I HATE BIG LETTERS >:c
