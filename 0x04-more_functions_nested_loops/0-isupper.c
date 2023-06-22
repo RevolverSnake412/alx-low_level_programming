@@ -3,6 +3,8 @@
 /**
  * _isupper - I am case sensitive, I HATE BIG LETTERS >:c
  *
+ * @c: int
+ *
  * Return: 0 if cute letter, 1 if ugly letter
 */
 int _isupper(int c)
@@ -12,8 +14,5 @@ int _isupper(int c)
 	}
 	else if (c >= 'A' && c <= 'Z')
 	{return (1);
-	}
-	else
-	{printf("That's not a letter");
 	}
 }
