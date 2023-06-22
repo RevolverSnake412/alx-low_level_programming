@@ -1,7 +1,10 @@
 #include "main.h"
 /**
+ * _isdigit - digit checker
  *
+ * @c: int
  *
+ * Return: 1 if digit, 0 if else
 */
 int _isdigit(int c)
 {
