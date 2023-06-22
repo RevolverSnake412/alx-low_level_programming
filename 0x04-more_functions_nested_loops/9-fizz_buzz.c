@@ -1,8 +1,10 @@
 #include <stdio.h>
 /**
  * main - main
+ *
+ * Return: 0 on success
 */
-int main (void)
+int main(void)
 {	int i = 1;
 	for (; i <= 100; i++)
 	{
@@ -28,4 +30,5 @@ int main (void)
 		}
 	}
 	putchar('\n');
+	return (0);
 }
