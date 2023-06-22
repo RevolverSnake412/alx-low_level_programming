@@ -1,6 +1,8 @@
 #include "main.h"
 /**
+ * print_diagonal - it draws a diagonal line
  *
+ * @n: int
 */
 void print_diagonal(int n)
 {int i = 1, j, count = -1;
