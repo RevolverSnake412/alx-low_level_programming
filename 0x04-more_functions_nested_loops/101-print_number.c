@@ -5,16 +5,16 @@
  * @n: the number provided by the user
 */
 void print_number(int n)
-{
-	if (n <= -1)
-	{
-		n *= -1;
+{	unsigned int number;
+	if (n < 0)
+	{number = -n;
 		_putchar(45);
+	} else
+	{number = n;
 	}
-	if (n / 10)
-	{
-		print_number(n / 10);
-	}
-	_putchar((n % 10) + 48);
-}
 
+	if (number / 10)
+	{print_number(number / 10);
+	}
+	_putchar((number % 10) + 48);
+}
