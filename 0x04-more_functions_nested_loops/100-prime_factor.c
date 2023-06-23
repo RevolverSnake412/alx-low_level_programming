@@ -12,7 +12,7 @@ int main(void)
 		max = 2;
 		number /= 2;
 	}
-	for (i = 3; i <= sqrt(n); i = i + 2)
+	for (i = 3; i <= sqrt(number); i = i + 2)
 	{
 		while (number % i == 0)
 		{
