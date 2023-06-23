@@ -17,7 +17,7 @@ void print_number(int n)
 	}
 	else
 	{
-		number = n
+		number = n;
 	}
 
 	while ((number / zero) >= 10)
