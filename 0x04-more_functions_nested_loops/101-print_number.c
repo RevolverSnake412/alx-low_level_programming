@@ -1,11 +1,10 @@
 #include "main.h"
-#include <stdint.h>
 /**
  * print_number - just prints number provided
  *
  * @n: the number provided by the user
 */
-void print_number(intmax_t n)
+void print_number(int n)
 {
 	int zero = 1;
 	int i = 0;
@@ -21,7 +20,7 @@ void print_number(intmax_t n)
 		zero *= 10;
 		i++;
 	}
-	for (; i != 0; i--)
+	for (; i >= 0; i--)
 	{
 		_putchar(((n / zero) % 10) + 48);
 		zero /= 10;
