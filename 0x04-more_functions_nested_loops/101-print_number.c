@@ -6,8 +6,11 @@
 */
 void print_number(int n)
 {
-	int zero = 1;
-	int i = 0;
+	if (n == 0)
+	{
+	_putchar(48);
+	return;
+	}
 
 	if (n < 0)
 	{
@@ -15,15 +18,23 @@ void print_number(int n)
 		n *= -1;
 	}
 
-	while ((n / zero) >= 10)
+	int zero = 1;
+	int temp = n;
+
+	while (temp != 0)
 	{
-		zero *= 10;
-		i++;
+	zero *= 10;
+	temp /= 10;
 	}
-	for (; i != 0; i--)
+
+	zero /= 10;
+
+	while (zero != 0)
 	{
-		_putchar(((n / zero) % 10) + 48);
-		zero /= 10;
+	int digit = n / zero;
+	_putchar('0' + digit);
+	n %= zero;
+	zero /= 10;
 	}
-	_putchar((n % 10) + 48);
 }
+
