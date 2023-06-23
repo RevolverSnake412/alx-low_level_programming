@@ -1,10 +1,11 @@
 #include "main.h"
+#include <stdint.h>
 /**
  * print_number - just prints number provided
  *
  * @n: the number provided by the user
 */
-void print_number(int n)
+void print_number(intmax_t n)
 {
 	int zero = 1;
 	int i = 0;
