@@ -20,7 +20,7 @@ void print_number(int n)
 		zero *= 10;
 		i++;
 	}
-	for (; i >= 0; i--)
+	for (; i != 0; i--)
 	{
 		_putchar(((n / zero) % 10) + 48);
 		zero /= 10;
