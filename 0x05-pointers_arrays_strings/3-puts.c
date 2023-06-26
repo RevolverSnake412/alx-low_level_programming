@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _puts = prints text
+ * _puts - prints text
  *
  * @str: char
 */
