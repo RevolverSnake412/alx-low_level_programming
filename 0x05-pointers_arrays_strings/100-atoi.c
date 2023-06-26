@@ -28,7 +28,6 @@ int _atoi(char *s)
 			}
 			num = num * 10 + digit;
 			flag = 1;
-			}
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 			{
 				break;
