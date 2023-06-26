@@ -25,9 +25,9 @@ int _atoi(char *s)
 			if (sign % 2)
 			{
 				digit *= -1;
-				num *= 10;
-				num += digit;
-				flag = 1;
+			}
+			num = num * 10 + digit;
+			flag = 1;
 			}
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 			{
