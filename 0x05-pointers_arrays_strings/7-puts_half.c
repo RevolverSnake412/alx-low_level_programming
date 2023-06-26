@@ -10,10 +10,10 @@ void puts_half(char *str)
 	{
 		counter++;
 	}
-	halfcounter = counter / 2;
-	for (; counter != halfcounter; counter--)
+	halfcounter = (counter - 1) / 2;
+	for (halfcounter + 1; halfcounter < counter; halfcounter++)
 	{
-		_putchar(str[counter]);
+		_putchar(str[halfcounter]);
 	}
 	_putchar('\n');
 }
