@@ -19,7 +19,7 @@ int _atoi(char *s)
 		{
 			sign++;
 		}
-		else if (s[i] >= '0' && s[i] <= '9')
+		if (s[i] >= '0' && s[i] <= '9')
 		{
 			digit = s[i] - '0';
 			if (sign % 2)
