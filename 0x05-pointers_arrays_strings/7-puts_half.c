@@ -5,7 +5,7 @@
  * @str: char
 */
 void puts_half(char *str)
-{
+{	int counter = 0;
 	while (*str != '\0')
 	{
 		str++;
