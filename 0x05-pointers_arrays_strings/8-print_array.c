@@ -14,9 +14,8 @@ void print_array(int *a, int n)
 		printf("%d", a[i]);
 		if (i != lastind)
 		{
-			_putchar(44);
-			_putchar(32);
+			printf(", ");
 		}
 	}
-	_putchar('\n');
+	printf("\n");
 }
