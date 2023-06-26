@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts2 - prints even numbers
+ * puts2 - prints every other number
  *
  * @str: char
 */
@@ -13,6 +13,7 @@ void puts2(char *str)
 		{
 			_putchar(str[index]);
 		}
+		index++;
 	}
 	_putchar('\n');
 }
