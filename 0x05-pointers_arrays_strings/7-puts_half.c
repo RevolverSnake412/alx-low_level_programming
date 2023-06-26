@@ -5,15 +5,15 @@
  * @str: char
 */
 void puts_half(char *str)
-{	int counter = 0, halfcounter;
+{	int counter = 0, halfcounter, index;
 	while (str[counter] != '\0')
 	{
 		counter++;
 	}
 	halfcounter = (counter - 1) / 2;
-	for (halfcounter + 1; halfcounter < counter; halfcounter++)
+	for (index = halfcounter + 1; index < counter; index++)
 	{
-		_putchar(str[halfcounter]);
+		_putchar(str[index]);
 	}
 	_putchar('\n');
 }
