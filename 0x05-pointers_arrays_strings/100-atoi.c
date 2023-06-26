@@ -7,7 +7,7 @@
  * Return: num if success, 0 if else
 */
 int _atoi(char *s)
-{	int sign = 0, num = 0, i, length = 0, flag = 0, digit = 0;
+{	int sign = 0, num = 0, i = 0, length = 0, flag = 0, digit = 0;
 
 	while (s[length] != '\0')
 	{
