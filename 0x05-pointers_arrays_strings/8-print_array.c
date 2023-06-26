@@ -8,11 +8,11 @@
  * @n: int
 */
 void print_array(int *a, int n)
-{	int i = 0;
-	for (; i <= n - 1; i++)
+{	int i = 0, lastind = n - 1;
+	for (; i <= lastind; i++)
 	{
 		printf("%d", a[i]);
-		if (i != n - 1)
+		if (i != lastind)
 		{
 			_putchar(44);
 			_putchar(32);
