@@ -4,33 +4,42 @@
  *
  * @s: string
  *
- * Return: results
+ * Return: num if success, 0 if else
 */
 int _atoi(char *s)
-{
-	int sign = 1;
-	int r = 0;
-	int i = 0;
+{	int sign = 0, num = 0, i, length = 0, flag = 0, digit = 0;
 
-	while (s[i] == ' ' || (s[i] >= 9 && s[i] <= 13))
+	while (s[length] != '\0')
 	{
-	i++;
+		length++;
 	}
-	if (s[i] == '-' || s[i] == '+')
+	while (i < length && flag == 0)
 	{
-	sign = (s[i] == '-') ? -1 : 1;
-	i++;
-	}
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		if (r > (INT_MAX / 10) || (r == INT_MAX / 10 && (s[i] - '0') > INT_MAX % 10))
+		if (s[i] == '-')
 		{
-			return ((sign == 1) ? INT_MAX : INT_MIN);
+			sign++;
 		}
-		r = r * 10 + (s[i] - '0');
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (sign % 2)
+			{
+				digit *= -1;
+				num *= 10;
+				num += digit;
+				flag = 1;
+			}
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+			{
+				break;
+			}
+			flag = 0;
+		}
 		i++;
 	}
-	int rst = r * sign;
-
-	return (rst);
+	if (flag == 0)
+	{
+		return (0);
+	}
+	return (num);
 }
