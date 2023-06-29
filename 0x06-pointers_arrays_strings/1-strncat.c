@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - strncat
+ * *_strncat - strncat
  *
  * @dest: char
  *
