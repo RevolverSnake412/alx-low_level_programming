@@ -11,17 +11,17 @@
  * Return: dest on success
 */
 char *_strncpy(char *dest, char *src, int n)
-{	int j = 0;
+{int i = 0;
 
-	while (j < n && src[j] != '\0')
-        {
-                dest[j] = src[j];
-                j++;
-        }
-        while (j < n)
-        {
-                dest[j] = '\0';
-                j++;
-        }
-        return (dest);
+while (i < n && src[i] != '\0')
+{
+dest[i] = src[i];
+i++;
+}
+while (i < n)
+{
+dest[i] = '\0';
+i++;
+}
+return (dest);
 }
