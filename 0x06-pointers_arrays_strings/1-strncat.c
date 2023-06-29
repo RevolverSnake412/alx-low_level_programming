@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strncat - strncat
+ * _strncat - strncat
  *
  * @dest: char
  *
@@ -12,6 +12,7 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {	int i = 0, j = 0;
+
 	while (dest[i] != '\0')
 	{
 		i++;
