@@ -1,10 +1,11 @@
 #include "main.h"
+
 /**
  * leet - leet
  *
  * @str: char
  *
- * Return: str
+ * Return: returns str
 */
 char *leet(char *str)
 {	int i, j;
