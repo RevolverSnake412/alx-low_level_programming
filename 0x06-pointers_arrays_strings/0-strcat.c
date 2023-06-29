@@ -1,7 +1,10 @@
 #include "main.h"
-#include <string.h>
 /**
  * _strcat - strcat
+ *
+ * @dest: char
+ *
+ * @src: char
  *
  * Return: dest
 */
@@ -18,4 +21,5 @@ char _strcat(char *dest, char *src)
 		j++;
 	}
 	dest[i] = '/0';
+	return (dest);
 }
