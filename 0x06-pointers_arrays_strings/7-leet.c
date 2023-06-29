@@ -7,13 +7,13 @@
  * Return: str
 */
 char *leet(char *str)
-{	int i = 0, j = 0;
+{	int i, j;
 	char lets[] = "aAeEoOtTlL";
 	char nums[] = "4433007711";
 
-	for (; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (; j < 10; j++)
+		for (j = 0; j < 10; j++)
 		{
 			if (str[i] == lets[j])
 			{
