@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * leet - leet
- *
+ * leet - encodes a string to 1337
  * @str: char
  *
- * Return: returns str
-*/
+ * Return: Pointer to the encoded string
+ */
 char *leet(char *str)
-{	int i, j;
+{
+	int i, j;
 	char lets[] = "aAeEoOtTlL";
 	char nums[] = "4433007711";
 
@@ -19,8 +19,10 @@ char *leet(char *str)
 			if (str[i] == lets[j])
 			{
 				str[i] = nums[j];
+				break;
 			}
-                }
-        }
-        return (str);
+		}
+	}
+
+	return (str);
 }
