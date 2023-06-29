@@ -11,7 +11,7 @@
  * Return: dest on success
 */
 char *_strncpy(char *dest, char *src, int n)
-{	int i = 0, j = 0;
+{	int j = 0;
 
 	while (j < n && src[j] != '\0')
         {
