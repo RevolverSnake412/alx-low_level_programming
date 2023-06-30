@@ -7,6 +7,7 @@
 void rev_string(char *n)
 {int i = 0, j;
 char temp;
+
 while (*(n + i) != '\0')
 {
 i++;
@@ -21,17 +22,16 @@ temp = *(n + j);
 }
 /**
  * infinite_add - infinite add
- *
  * @n1: char
  * @n2: char
  * @r: char
  * @size_r: int
- *
  * Return: call func
 */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {int lever = 0, i = 0, j = 0, digits = 0;
 int val1 = 0, val2 = 0, tot = 0;
+
 while (*(n1 + i) != '\0')
 {
 i++;
