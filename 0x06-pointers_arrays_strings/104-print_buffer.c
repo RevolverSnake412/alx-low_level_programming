@@ -12,14 +12,14 @@ void print_buffer(char *b, int size)
         int i, j, check = 0;
         if (size <= 0)
         {
-                _putchar('\n');
+		printf("\n");
                 return;
         }
         while (check < size)
         {
                 j = size - check < 10 ? size - check : 10;
                 printf("%08x: ", check);
-                for (i = 0; i <= 9; i++)
+                for (i = 0; i < 10; i++)
                 {
 			if (i < j)
                                 printf("%02x", *(b + check + i));
