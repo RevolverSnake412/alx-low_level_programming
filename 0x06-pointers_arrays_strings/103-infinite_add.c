@@ -69,7 +69,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		{
                         val2 = *(n2 + j) - '0';
 		}
-                tot = val1 + val2 + of;
+                tot = val1 + val2 + lever;
                 if (tot >= 10)
 		{
                         lever = 1;
