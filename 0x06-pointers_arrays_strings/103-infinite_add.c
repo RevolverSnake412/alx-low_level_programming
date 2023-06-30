@@ -7,7 +7,6 @@
 void rev_string(char *n)
 {int i = 0, j;
 char temp;
-
 while (*(n + i) != '\0')
 {
 i++;
@@ -20,7 +19,6 @@ temp = *(n + j);
 *(n + i) = temp;
 }
 }
-
 /**
  * infinite_add - infinite add
  * @n1: char
@@ -43,12 +41,10 @@ j++;
 }
 i--;
 j--;
-
 if (j >= size_r || i >= size_r)
 {
 return (0);
 }
-
 while (j >= 0 || i >= 0 || lever == 1)
 {
 if (i < 0)
@@ -59,7 +55,6 @@ else
 {
 val1 = *(n1 + i) - '0';
 }
-
 if (j < 0)
 {
 val2 = 0;
@@ -68,9 +63,7 @@ else
 {
 val2 = *(n2 + j) - '0';
 }
-
 tot = val1 + val2 + lever;
-
 if (tot >= 10)
 {
 lever = 1;
@@ -79,23 +72,19 @@ else
 {
 lever = 0;
 }
-
 if (digits >= (size_r - 1))
 {
 return (0);
 }
-
 *(r + digits) = (tot % 10) + '0';
 digits++;
 j--;
 i--;
 }
-
 if (digits == size_r)
 {
 return (0);
 }
-
 *(r + digits) = '\0';
 rev_string(r);
 return (r);
