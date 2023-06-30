@@ -27,6 +27,7 @@ void rev_string(char *n)
  * @n2: char
  * @r: char
  * @size_r: int
+ * Return: Void
 */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {	int overflow = 0, i = 0, j = 0, digits = 0;
