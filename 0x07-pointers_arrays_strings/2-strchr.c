@@ -15,9 +15,10 @@ char *_strchr(char *s, char c)
 	{
 		i++;
 	}
-	while (s[i] != '\0')
+	while (s[i] >= '\0')
 	{
 		return (&s[i]);
+		i++;
 	}
 	return (0);
 }
