@@ -12,7 +12,7 @@ void print_diagsums(int *a, int size)
 
 	while (i < size)
 	{
-		s0 += a[i * size + y];
+		s0 += a[i * size + i];
 		y++;
 	}
 	i = size;
