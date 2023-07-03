@@ -9,24 +9,25 @@
  * Return: n
 */
 unsigned int _strspn(char *s, char *accept)
-{	int i = 0, count = 0, flag = 0;
+{	int i = 0, j, flag;
+	unsigned count = 0;
 	while (s[i] != '\0')
 	{
-	found = 0;
-	for (int j = 0; accept[j] != '\0'; j++)
+	flag = 0;
+	for (j = 0; accept[j] != '\0'; j++)
 	{
 		if (s[i] == accept[j])
 		{
-			found = 1;
+			flag = 1;
 			break;
 		}
 	}
-	if (!found)
+	if (!flag)
 	{
 	break;
 	}
-	n++;
+	count++;
 	i++;
 	}
-	return (n);
+	return (count);
 }
