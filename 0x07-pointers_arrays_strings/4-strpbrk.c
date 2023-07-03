@@ -9,10 +9,11 @@
  * Return: s
 */
 char *_strpbrk(char *s, char *accept)
-{	int i = 0;
+{	int i;
 
 	while (*s)
 	{
+		i = 0;
 		while (accept[i])
 		{
 			if (*s == accept[i])
