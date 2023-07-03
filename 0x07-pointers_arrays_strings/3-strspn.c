@@ -10,7 +10,8 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {	int i = 0, j, flag;
-	unsigned count = 0;
+	unsigned int count = 0;
+
 	while (s[i] != '\0')
 	{
 	flag = 0;
