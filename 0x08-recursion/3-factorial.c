@@ -1,6 +1,10 @@
 #include "main.h"
 /**
+ * factorial - factorial :3
  *
+ * @n: int
+ *
+ * result: -1 if under zero, 1 if n equals one, result if greater than one
 */
 int factorial(int n)
 {
