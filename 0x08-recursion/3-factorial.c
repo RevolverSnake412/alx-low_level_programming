@@ -4,7 +4,7 @@
  *
  * @n: int
  *
- * Result: -1 if under zero, 1 if n equals one, result if greater than one
+ * Return: -1 if under zero, 1 if n equals one, result if greater than one
 */
 int factorial(int n)
 {
@@ -12,7 +12,7 @@ int factorial(int n)
 
 	if (n < 0)
 	{
-		return(-1);
+		return (-1);
 	}
 
 	if (n == 1)
