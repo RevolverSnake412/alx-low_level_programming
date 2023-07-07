@@ -8,44 +8,40 @@
  *
  * Return: 1 if money less than a Penny, 0 on success
 */
-int main (int argc __attribute__((unused)), char *argv[])
-{
-	int Quarter, Dime, Nickel, Pair, Penny;
-	int Cents, S = 0;
-	int money = atoi(argv[1]);
+int main(int argc __attribute__((unused)), char *argv[])
+{	int Quarter = 25, Dime = 10, Nickel = 5, Pair = 2, Penny = 1, Cents, S = 0;
 
-	Quarter = 25;
-	Dime = 10;
-	Nickel = 5;
-	Pair = 2;
-	Penny = 1;
-
-	if (money < 1)
+	if (atoi(argv[1]) < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	else if (atoi(argv[1]) < 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
 	else
 	{
-		for (Cents = 0; S != money; Cents++)
+		for (Cents = 0; S != atoi(argv[1]); Cents++)
 		{
-			if (money - S >= Quarter)
+			if (Quarter <= atoi(argv[1]) - S)
 			{
 				S += Quarter;
 			}
-			else if (money - S >= Dime)
+			else if (Dime <= atoi(argv[1]) - S)
 			{
 				S += Dime;
 			}
-			else if (money - S >= Nickel)
+			else if (Nickel <= atoi(argv[1]) - S)
 			{
 				S += Nickel;
 			}
-			else if (money - S >= Pair)
+			else if (Pair <= atoi(argv[1]) - S)
 			{
 				S += Pair;
 			}
-			else if (money - S == Penny)
+			else if (Penny == atoi(argv[1]) - S)
 			{
 				S += Penny;
 			}
