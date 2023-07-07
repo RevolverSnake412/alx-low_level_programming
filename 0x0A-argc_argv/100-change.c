@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 /**
  * main - main
  *
@@ -22,8 +21,7 @@ int main(int argc, char *argv[])
 	}
 	if (Money < 0)
 	{
-		putchar(48);
-		putchar('\n');
+		printf("0\n");
 		return (0);
 	}
 
