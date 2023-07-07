@@ -8,19 +8,19 @@
  *
  * Return: 1 if money less than a Penny, 0 on success
 */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {	int Quarter = 25, Dime = 10, Nickel = 5, Pair = 2, Penny = 1, Cents, S = 0;
 
-	if (atoi(argv[1]) < 0)
-	{
-		printf("0\n");
-		return (0);
-	}
-	else if (atoi(argv[1]) < 1)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	if (atoi(argv[1]) < 0)
+        {
+                printf("0\n");
+                return (0);
+        }
 	else
 	{
 		for (Cents = 0; S != atoi(argv[1]); Cents++)
