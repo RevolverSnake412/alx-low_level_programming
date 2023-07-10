@@ -1,14 +1,17 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - get ends of input and add together for size
- * @s1: input one to concat
- * @s2: input two to concat
- * Return: concat of s1 and s2
+ * str_concat - str_concat
+ *
+ * @s1: char
+ *
+ * @s2: char
+ *
+ * Return: con on success, NULL if fail
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *conct;
+	char *con;
 	int i = 0, j = 0;
 
 	if (s1 == NULL)
