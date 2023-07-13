@@ -1,7 +1,11 @@
 #include <stdlib.h>
 #include "main.h"
 /**
+ * malloc_checked - returns memory address
  *
+ * @b: unsigned int input
+ *
+ * Return: pb on success
 */
 void *malloc_checked(unsigned int b)
 {
@@ -9,7 +13,7 @@ void *malloc_checked(unsigned int b)
 
 	if (pb == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 	return (pb);
 }
