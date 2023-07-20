@@ -7,10 +7,8 @@
  * @format: const char
  */
 void print_all(const char * const format, ...)
-{
-	int i = 0;
+{	int i = 0;
 	char *string;
-
 	va_list args;
 
 	va_start(args, format);
@@ -41,7 +39,7 @@ void print_all(const char * const format, ...)
 					continue;
 			}
 			i++;
-			while(format[i] != '\0')
+			while (format[i] != '\0')
 			{
 				printf(", ");
 				break;
