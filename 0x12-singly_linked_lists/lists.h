@@ -1,7 +1,7 @@
-#include <stddef.h>
-
 #ifndef LISTS_H
 #define LISTS_H
+
+#include <stddef.h>
 
 typedef struct list_s
 {
