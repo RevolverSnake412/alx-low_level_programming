@@ -3,11 +3,17 @@
 
 #include <stddef.h>
 
-typedef struct list_s
+/**
+ * struct list - struct list
+ * @str: char
+ * @len: unsigned int
+ * @next: next
+*/
+typedef struct list
 {
 	char *str;
 	unsigned int len;
-	struct list_s *next;
+	struct list *next;
 } list_t;
 
 size_t print_list(const list_t *h);
