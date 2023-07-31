@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * pop_listint - pop_listint
  * @head: linked list
@@ -11,6 +12,7 @@ int pop_listint(listint_t **head)
 	int n = (*head)->n;
 
 	new = (*head)->next;
+	free(*head);
 	(*head) = new;
 
 	return (n);
