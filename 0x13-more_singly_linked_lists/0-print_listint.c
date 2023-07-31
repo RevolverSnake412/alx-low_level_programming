@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_listint - print_listint
- * @listint_t: our beloved structur
+ * @h: our beloved structur
  *
  * Return: the number of elements
 */
