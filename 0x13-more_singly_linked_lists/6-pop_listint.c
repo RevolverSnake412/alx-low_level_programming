@@ -1,6 +1,9 @@
 #include "lists.h"
 /**
+ * pop_listint - pop_listint
+ * @head: linked list
  *
+ * Return: n
 */
 int pop_listint(listint_t **head)
 {
