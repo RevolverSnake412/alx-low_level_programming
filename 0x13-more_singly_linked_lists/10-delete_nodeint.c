@@ -24,14 +24,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (1);
 	}
 
-	i = 0;
-
-	while (i < index - 1)
+	for (i = 0; i < index - 1; i++)
 	{
 		if (!new || new->next == NULL)
 			return (-1);
-		(*head) = (*head)->next;
-		i++;
+		new = new->next;
 	}
 
 	select = new->next;
