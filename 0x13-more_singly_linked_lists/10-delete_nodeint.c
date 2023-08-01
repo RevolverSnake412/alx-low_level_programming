@@ -1,6 +1,10 @@
 #include "lists.h"
 /**
+ * delete_nodeint_at_index - delete index
+ * @head: listed int
+ * @index: index
  *
+ * Return: 1 succes, -1 fail
 */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
@@ -9,7 +13,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *select;
 
 	if (!*head)
-		return (NULL);
+		return (-1);
 
 	if (index == 0)
 	{
