@@ -25,7 +25,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 
 	for (i = 0; i < index - 1; i++)
+	{
+		if (!new || new->next == NULL)
+			return (-1);
 		(*head) = (*head)->next;
+	}
 
 	select = new->next;
 	new->next = select->next;
