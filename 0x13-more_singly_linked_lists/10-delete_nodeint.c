@@ -31,6 +31,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (!new || new->next == NULL)
 			return (-1);
 		(*head) = (*head)->next;
+		i++;
 	}
 
 	select = new->next;
