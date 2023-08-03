@@ -7,28 +7,18 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal, y = 1;
-	int bit = 0;
-
-	if (!b)
-		return (0);
+	unsigned int decimal = 0;
+	int i, bit = 0;
 
 	while (b[bit])
-	{
-		if (b[bit] < 48 || b[bit] > 49)
-			return (0);
 		bit++;
-	}
 
-	bit--;
-
-	while (b[bit])
+	for (i = 0; i < bit; i++)
 	{
-		if (b[bit] == 49)
-			decimal += y;
-		bit--;
-		y *= 2;
-	}
+		if (b[i] < 48 || b[i] > 49)
+			return (0);
 
+		decimal = (2 * decimal) + (b[i] - 48);
+	}
 	return (decimal);
 }
