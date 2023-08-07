@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * letters);
 
 	size = read(file, buffer, letters);
-	written = write(1, buffer, size);
+	written = write(STDOUT_FILENO, buffer, size);
 
 	if (written == -1)
 		return (0);
