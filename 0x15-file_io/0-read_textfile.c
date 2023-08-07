@@ -9,14 +9,20 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file = open(filename, O_RDONLY);
+	int file;
 	char *buffer = malloc(sizeof(char) * letters);
-	ssize_t size = read(file, buffer, letters);
+	ssize_t size;
 	ssize_t written;
 
-	if (file == -1 || filename == NULL)
+	if (filename == NULL)
 		return (0);
 
+	file = open(filename, O_RDONLY);
+
+	if (file == -1)
+		return (0);
+
+	size = read(file, buffer, letters);
 	written = write(1, buffer, size);
 
 	if (written == -1)
@@ -27,3 +33,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	return (written);
 }
+/* Owu */
