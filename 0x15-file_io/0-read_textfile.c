@@ -10,16 +10,13 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t file = open(filename, O_RDONLY);
-	char *buffer;
-	ssize_t size;
+	char *buffer = malloc(sizeof(char) * letters);
+	ssize_t size = read(file, buffer, letters);
 	ssize_t written;
 
 	if (file == -1 || filename == NULL)
 		return (0);
 
-	buffer = malloc(sizeof(char) * letters);
-
-	size = read(file, buffer, letters);
 	written = write(STDOUT_FILENO, buffer, size);
 
 	if (written == -1)
