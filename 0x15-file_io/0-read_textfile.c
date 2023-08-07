@@ -1,8 +1,5 @@
 #include "main.h"
-#include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <fcntl.h>
 /**
  * read_textfile - prints what it reads, bc why not? this is a free country!
  * @filename: file
