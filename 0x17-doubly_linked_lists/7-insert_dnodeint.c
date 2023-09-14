@@ -2,6 +2,7 @@
 #include <stdlib.h>
 /**
  * insert_dnodeint_at_index - insert in nth index
+ * @h: head
  * @idx: index
  * @n: number
  *
@@ -9,36 +10,36 @@
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	unsigned int i = 0;
-	dlistint_t *tmp;
+	dlistint_t *new;
 	dlistint_t *head;
+	unsigned int i;
 
-	if (h == NULL)
-		return (NULL);
-
-	head = *h;
-
-	while (head->prev != NULL)
-		head = head->prev;
-
-	tmp = NULL;
-
-	while (head != NULL)
+	new = NULL;
+	if (idx == 0)
+		new = add_dnodeint(h, n);
+	else
+	{
+		head = *h;
+		i = 1;
+		if (head != NULL)
+			while (head->prev != NULL)
+				head = head->prev;
+		while (head != NULL)
 		{
 			if (i == idx)
 			{
 				if (head->next == NULL)
-					tmp = add_dnodeint_end(h, n);
+					new = add_dnodeint_end(h, n);
 				else
 				{
-					tmp = malloc(sizeof(dlistint_t));
-					if (tmp != NULL)
+					new = malloc(sizeof(dlistint_t));
+					if (new != NULL)
 					{
-						tmp->n = n;
-						tmp->next = head->next;
-						tmp->prev = head;
-						head->next->prev = tmp;
-						head->next = tmp;
+						new->n = n;
+						new->next = head->next;
+						new->prev = head;
+						head->next->prev = new;
+						head->next = new;
 					}
 				}
 				break;
@@ -46,5 +47,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			head = head->next;
 			i++;
 		}
-	return (tmp);
+	}
+	return (new);
 }
