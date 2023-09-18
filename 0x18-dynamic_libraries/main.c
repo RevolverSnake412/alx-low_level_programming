@@ -119,13 +119,18 @@ int _strlen(char *s)
 }
 
 /**
- * main - Entry point of the program
+ * _puts - prints text
  *
- * Return: 0 on successful execution
- */
-int main(void)
-{puts("\"Programming is like building a multilingual puzzle");
-return (0);
+ * @str: char
+*/
+void _puts(char *str)
+{
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
 }
 
 /**
