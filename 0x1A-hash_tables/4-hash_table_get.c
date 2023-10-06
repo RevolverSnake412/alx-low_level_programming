@@ -22,7 +22,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	new_node = ht->array[idx];
 
-	if (*key == NULL)
+	if (*key == '\0')
 		return (NULL);
 
 	while (strcmp(new_node->key, key) != 0 && new_node != NULL)
