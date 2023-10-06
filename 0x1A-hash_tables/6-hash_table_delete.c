@@ -21,7 +21,7 @@ void hash_table_delete(hash_table_t *ht)
 				free(sel_node->key);
 				free(sel_node->value);
 				free(sel_node);
-				sel_node = tmp;
+				sel_node = temp;
 			}
 		}
 	}
