@@ -3,4 +3,4 @@ SRCS = main.c school.c
 EXE = school
 
 all:
-    $(CC) $(SRCS) -o $(EXE)
+	$(CC) $(SRCS) -o $(EXE)
