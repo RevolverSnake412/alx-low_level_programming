@@ -1,0 +1,9 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = main.o school.o
+NAME = school
+
+all:
+	$(CC) -c -o $(firstword $(OBJ)) $(firstword $(SRC))
+	$(CC) -c -o $(lastword $(OBJ)) $(lastword $(SRC))
+	$(CC) $(firstword $(OBJ)) $(lastword $(OBJ)) -o $(NAME)
